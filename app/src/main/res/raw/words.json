@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "word":"Bad",
+    "meaning":"Kharap",
+    "sentence":"He is Bad",
+    "section_id":1
+  },
+  {
+    "id": 2,
+    "word":"Job",
+    "meaning":"Kormo",
+    "sentence":"I have no job",
+    "section_id":2
+  },
+  {
+    "id": 3,
+    "word":"Food",
+    "meaning":"Khabar",
+    "sentence":"He has no Food",
+    "section_id":3
+  },
+  {
+    "id": 4,
+    "word":"Game",
+    "meaning":"khela",
+    "sentence":"I love to play game",
+    "section_id":1
+  },
+  {
+    "id": 5,
+    "word":"Wood",
+    "meaning":"Kath",
+    "sentence":"He is cutting wood",
+    "section_id":2
+  },
+  {
+    "id": 6,
+    "word":"Bed",
+    "meaning":"Bichana",
+    "sentence":"I am going to bed",
+    "section_id":3
+  },
+  {
+    "id": 7,
+    "word":"Computer",
+    "meaning":"Gononajontro",
+    "sentence":"I have a computer",
+    "section_id":1
+  },
+  {
+    "id": 8,
+    "word":"Message",
+    "meaning":"Barta",
+    "sentence":"Send me a message",
+    "section_id":2
+  },
+  {
+    "id": 9,
+    "word":"Car",
+    "meaning":"gari",
+    "sentence":"I have no car",
+    "section_id":1
+  },
+  {
+    "id": 10,
+    "word":"Poor",
+    "meaning":"gorib",
+    "sentence":"I am Poor",
+    "section_id":3
+  }
+]

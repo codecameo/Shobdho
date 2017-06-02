@@ -6,10 +6,12 @@ import android.arch.persistence.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
+import bytes.wit.dpHelper.Constants;
+
 /**
  * Created by Md. Sifat-Ul Haque on 5/26/2017.
  */
-@Entity(tableName = "section")
+@Entity(tableName = Constants.SECTION_TABLE_NAME)
 public class SectionEntity {
 
     @PrimaryKey

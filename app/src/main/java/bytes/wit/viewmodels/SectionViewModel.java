@@ -3,10 +3,7 @@ package bytes.wit.viewmodels;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import bytes.wit.factory.WordFactory;
@@ -17,7 +14,7 @@ import bytes.wit.factory.models.Section;
  */
 public class SectionViewModel extends AndroidViewModel {
 
-    private LiveData<List<Section>> sections;
+    private LiveData<List<Section>> mLiveSections;
     private Application mApplication;
 
     public SectionViewModel(Application application) {
@@ -25,11 +22,11 @@ public class SectionViewModel extends AndroidViewModel {
         mApplication = application;
     }
 
-    public LiveData<List<Section>> getSections() {
-        if (sections == null) {
-            sections = loadSection();
+    public LiveData<List<Section>> getLiveSections() {
+        if (mLiveSections == null) {
+            mLiveSections = loadSection();
         }
-        return sections;
+        return mLiveSections;
     }
 
     private LiveData<List<Section>> loadSection() {

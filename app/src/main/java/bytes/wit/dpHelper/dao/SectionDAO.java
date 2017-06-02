@@ -9,6 +9,7 @@ import android.arch.persistence.room.Query;
 import java.util.ArrayList;
 import java.util.List;
 
+import bytes.wit.dpHelper.Constants;
 import bytes.wit.dpHelper.entities.SectionEntity;
 import bytes.wit.factory.models.Section;
 
@@ -23,6 +24,6 @@ public interface SectionDAO {
     /*@Query("SELECT * FROM section")
     LiveData<ArrayList<SectionEntity>> getAllSections();*/
 
-    @Query("SELECT * FROM section")
+    @Query("SELECT * FROM "+ Constants.SECTION_TABLE_NAME)
     LiveData<List<Section>> getAllSections();
 }

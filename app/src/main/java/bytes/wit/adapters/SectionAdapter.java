@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import bytes.wit.factory.models.Section;
+import bytes.wit.shobdho.HomeActivity;
 import bytes.wit.shobdho.R;
 import bytes.wit.shobdho.databinding.ItemSelectionListBinding;
 
@@ -20,6 +21,11 @@ import bytes.wit.shobdho.databinding.ItemSelectionListBinding;
 public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHolder> {
 
     private ArrayList<Section> mSections = new ArrayList<>();
+    private HomeActivity.OnSectionItemClickListener mOnSectionItemClickListener;
+
+    public SectionAdapter(HomeActivity.OnSectionItemClickListener onSectionItemClickListener) {
+        mOnSectionItemClickListener = onSectionItemClickListener;
+    }
 
     @Override
     public SectionAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -51,7 +57,8 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHold
         }
 
         public void bindTo() {
-            binding.tvSection.setText(mSections.get(getAdapterPosition()).getSectionName());
+            binding.setSection(mSections.get(getAdapterPosition()));
+            binding.setEvent(mOnSectionItemClickListener);
         }
     }
 }
