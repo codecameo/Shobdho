@@ -1,72 +1,202 @@
 [
   {
     "id": 1,
-    "word":"Bad",
-    "meaning":"Kharap",
-    "sentence":"He is Bad",
+    "word":"Aberrant",
+    "meaning":"departing from an accepted standard",
+    "sentence":"There may be some perhaps good points buried deeply in their aberrant behavior, but their aberrant behavior obscures whatever good points may be in there.",
+    "part_of_speech":"Adjective",
     "section_id":1
   },
   {
     "id": 2,
-    "word":"Job",
-    "meaning":"Kormo",
-    "sentence":"I have no job",
-    "section_id":2
+    "word":"Aberration",
+    "meaning":"a state or condition markedly different from the norm, a disorder in one's mental state",
+    "sentence":"The rise in prices suggested that March's decline, which was the first in 13 months, was an aberration.",
+    "part_of_speech":"Noun",
+    "section_id":1
   },
   {
     "id": 3,
-    "word":"Food",
-    "meaning":"Khabar",
-    "sentence":"He has no Food",
-    "section_id":3
+    "word":"Abstain",
+    "meaning":"choose not to consume; refrain from voting",
+    "sentence":"I abstain from alcohol",
+    "part_of_speech":"Verb",
+    "section_id":1
   },
   {
     "id": 4,
-    "word":"Game",
-    "meaning":"khela",
-    "sentence":"I love to play game",
+    "word":"Abstruse",
+    "meaning":"difficult to penetrate; incomprehensible to one of ordinary understanding or knowledge",
+    "sentence":"The professor's lectures were so abstruse that students tended to avoid them",
+    "part_of_speech":"Adjective",
     "section_id":1
   },
   {
     "id": 5,
-    "word":"Wood",
-    "meaning":"Kath",
-    "sentence":"He is cutting wood",
-    "section_id":2
+    "word":"Accolade",
+    "meaning":"an award or privilege granted as a special honor or as an acknowledgment of merit",
+    "sentence":"Despite all the accolades she received, she doesn’t think her actions were heroic or even out of the ordinary.",
+    "part_of_speech":"Noun",
+    "section_id":1
   },
   {
     "id": 6,
-    "word":"Bed",
-    "meaning":"Bichana",
-    "sentence":"I am going to bed",
-    "section_id":3
+    "word":"Acerbic",
+    "meaning":"sour or bitter in taste; harsh or corrosive in tone",
+    "sentence":"The acerbic former senator from South Carolina lasted less than 5 years in his position which he assumed in 2013.",
+    "part_of_speech":"Adjective",
+    "section_id":1
   },
   {
     "id": 7,
-    "word":"Computer",
-    "meaning":"Gononajontro",
-    "sentence":"I have a computer",
+    "word":"Acrimony",
+    "meaning":"a rough and bitter manner",
+    "sentence":"Acrimony between the two sides is running high.",
+    "part_of_speech":"Noun",
     "section_id":1
   },
   {
     "id": 8,
-    "word":"Message",
-    "meaning":"Barta",
-    "sentence":"Send me a message",
+    "word":"Adamant",
+    "meaning":"refusing to be persuaded or to change one's mind; very hard native crystalline carbon valued as a gem",
+    "sentence":"He is adamant in his refusal to change his mind.",
+    "part_of_speech":"Adjective",
     "section_id":2
   },
   {
     "id": 9,
-    "word":"Car",
-    "meaning":"gari",
-    "sentence":"I have no car",
+    "word":"Admonish",
+    "meaning":"warn strongly; put on guard",
+    "sentence":"He admonished the child for his bad behavior.",
+    "part_of_speech":"Verb",
     "section_id":1
   },
   {
     "id": 10,
-    "word":"Poor",
-    "meaning":"gorib",
-    "sentence":"I am Poor",
-    "section_id":3
+    "word":"Admonitory",
+    "meaning":"expressing reproof or reproach especially as a corrective; serving to warn",
+    "sentence":" If you're caught throwing paper airplanes in class, your teacher will probably give you an admonitory lecture.",
+    "part_of_speech":"Adjective",
+    "section_id":1
+  },
+  {
+    "id": 11,
+    "word":"Aesthete",
+    "meaning":"one who professes great sensitivity to the beauty of art and nature",
+    "sentence":"He remains an aesthete , but his appreciation of culture is now spiritually empty.",
+    "part_of_speech":"Noun",
+    "section_id":1
+  },
+  {
+    "id": 12,
+    "word":"Aesthetic",
+    "meaning":"concerning or characterized by an appreciation of beauty or good taste",
+    "sentence":"The illustrations made the book an aesthetic success",
+    "part_of_speech":"Adjective",
+    "section_id":1
+  },
+  {
+    "id": 13,
+    "word":"Aesthetic",
+    "meaning":"a set of principles underlying and guiding the work of a particular artist or artistic movement",
+    "sentence":"A good soundtrack creates a world, with its own aesthetic and rules, as much as plot and cinematography do.",
+    "part_of_speech":"Noun",
+    "section_id":1
+  },
+  {
+    "id": 14,
+    "word":"Amalgam",
+    "meaning":"a mixture of multiple things",
+    "sentence":"The film is an amalgam of various surreal images that tell a story of a man’s search for snails.",
+    "part_of_speech":"Noun",
+    "section_id":2
+  },
+  {
+    "id": 15,
+    "word":"Ambiguous",
+    "meaning":"having more than one possible meaning",
+    "sentence":"Frustrated by ambiguous instructions, the parents were unable to assemble the toy",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 16,
+    "word":"Ambivalent",
+    "meaning":"uncertain or unable to decide about what course to follow",
+    "sentence":"She is also deeply ambivalent about marriage and committing to a career in synthetic organic chemistry.",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 17,
+    "word":"Ameliorate",
+    "meaning":"to make better",
+    "sentence":"His sugar was in the toxic range, and now we were scrambling to ameliorate some of the damage.",
+    "part_of_speech":"Verb",
+    "section_id":2
+  },
+  {
+    "id": 18,
+    "word":"Amenable",
+    "meaning":"disposed or willing to comply; liable to answer to a higher authority; readily reacting to suggestions and influences; easily persuaded",
+    "sentence":"In this case, however, too many obstacles lie ahead that are not amenable to brute-force engineering.",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 19,
+    "word":"Amorphous",
+    "meaning":"having no definite form or distinct shape; shapeless",
+    "sentence":"The terrorist threat now appears much more amorphous and unpredictable than ever before.",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 20,
+    "word":"Anomalous",
+    "meaning":"not normal",
+    "sentence":"When the need to ask such questions occurs once in a while, it’s anomalous enough that we notice.",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 21,
+    "word":"Anomaly",
+    "meaning":"something that is not normal, standard or expected",
+    "sentence":"People aren’t looking for another Trump. Trump is an anomaly.",
+    "part_of_speech":"Noun",
+    "section_id":2
+  },
+  {
+    "id": 22,
+    "word":"Antipathy",
+    "meaning":"an intense feeling of dislike or aversion",
+    "sentence":"President Trump expressed antipathy toward the United Nations during the campaign.",
+    "part_of_speech":"Noun",
+    "section_id":2
+  },
+  {
+    "id": 23,
+    "word":"Antithetical",
+    "meaning":"sharply contrasted in character or purpose",
+    "sentence":"The hiring of a trial expert by a committee seems antithetical to that goal.",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 24,
+    "word":"Apathetic",
+    "meaning":"marked by a lack of interest",
+    "sentence":"Even some who would call themselves politically apathetic were worried by the move.",
+    "part_of_speech":"Adjective",
+    "section_id":2
+  },
+  {
+    "id": 25,
+    "word":"Apathy",
+    "meaning":"an absence of emotion or enthusiasm",
+    "sentence":"In a large portion of the young people, what you will see is apathy.",
+    "part_of_speech":"Noun",
+    "section_id":2
   }
 ]

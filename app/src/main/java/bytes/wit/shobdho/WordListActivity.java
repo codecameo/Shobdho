@@ -3,10 +3,14 @@ package bytes.wit.shobdho;
 import android.arch.lifecycle.LifecycleActivity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.List;
 
@@ -21,7 +25,7 @@ import bytes.wit.viewmodels.WordListViewModel;
  * Created by Md. Sifat-Ul Haque on 6/2/2017.
  */
 
-public class WordListActivity extends LifecycleActivity {
+public class WordListActivity extends BaseActivity {
 
     private ActivityWordListBinding mWordListBinding;
     private WordListAdapter mWordAdapter;
@@ -33,14 +37,19 @@ public class WordListActivity extends LifecycleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mWordListBinding = DataBindingUtil.setContentView(this,R.layout.activity_word_list);
+        setupToolbar(mWordListBinding.wordListToolbar.getId());
         initVariables();
         initViewModel();
-        setupSectionList();
+        setupWordList();
     }
 
-    private void setupSectionList() {
-        mWordListBinding.rvWordList.setLayoutManager(new LinearLayoutManager(this));
+    private void setupWordList() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        mWordListBinding.rvWordList.setLayoutManager(layoutManager);
         mWordListBinding.rvWordList.setAdapter(mWordAdapter);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
+                layoutManager.getOrientation());
+        mWordListBinding.rvWordList.addItemDecoration(dividerItemDecoration);
     }
 
     private void initViewModel() {
@@ -54,7 +63,16 @@ public class WordListActivity extends LifecycleActivity {
     }
 
     private void initVariables() {
-        mWordAdapter = new WordListAdapter();
+        mWordAdapter = new WordListAdapter(new OnItemClickListener());
         mSectionId = getIntent().getIntExtra(KEY_SECTION_ID,0);
+    }
+
+
+    public class OnItemClickListener{
+        public void onItemClicked(Word word){
+            Intent intent = new Intent(WordListActivity.this,WordDetailActivity.class);
+            intent.putExtra(WordDetailActivity.KEY_WORD_DETAIL,word);
+            startActivity(intent);
+        }
     }
 }

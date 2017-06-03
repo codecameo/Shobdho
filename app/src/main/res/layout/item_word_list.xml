@@ -2,17 +2,48 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tool="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <data>
+        <variable
+            name="event"
+            type="bytes.wit.shobdho.WordListActivity.OnItemClickListener" />
+        <variable
+            name="word"
+            type="bytes.wit.factory.models.Word" />
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:clickable="true"
+        android:onClick="@{(view) -> event.onItemClicked(word)}">
 
         <TextView
             android:id="@+id/tv_word"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="@dimen/default_margin"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="@dimen/padding_8dp"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:paddingTop="@dimen/default_margin"
+            android:singleLine="true"
+            android:text="@{word.word+` (`+word.part_of_speech+`)`}"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/abc_text_size_medium_material"
             tool:text="Word" />
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/tv_list_meaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_word"
+            android:ellipsize="end"
+            android:paddingBottom="@dimen/default_margin"
+            android:paddingLeft="@dimen/default_margin"
+            android:paddingRight="@dimen/default_margin"
+            android:singleLine="true"
+            android:text="@{word.meaning}" />
+    </RelativeLayout>
 </layout>

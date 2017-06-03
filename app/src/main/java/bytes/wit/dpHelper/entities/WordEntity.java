@@ -28,6 +28,7 @@ public class WordEntity {
     private String meaning;
     private String sentence;
     private int section_id;
+    private String part_of_speech;
 
     public int getId() {
         return id;
@@ -67,5 +68,13 @@ public class WordEntity {
 
     public void setSection_id(int section_id) {
         this.section_id = section_id;
+    }
+
+    public String getPart_of_speech() {
+        return part_of_speech;
+    }
+
+    public void setPart_of_speech(String part_of_speech) {
+        this.part_of_speech = part_of_speech;
     }
 }

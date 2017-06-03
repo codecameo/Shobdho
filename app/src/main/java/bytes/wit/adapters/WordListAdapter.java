@@ -11,6 +11,7 @@ import java.util.List;
 
 import bytes.wit.factory.models.Word;
 import bytes.wit.shobdho.R;
+import bytes.wit.shobdho.WordListActivity;
 import bytes.wit.shobdho.databinding.ItemSelectionListBinding;
 import bytes.wit.shobdho.databinding.ItemWordListBinding;
 
@@ -20,6 +21,11 @@ import bytes.wit.shobdho.databinding.ItemWordListBinding;
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHolder> {
 
     private List<Word> mWords = new ArrayList<>();
+    private WordListActivity.OnItemClickListener mOnItemClickListener;
+
+    public WordListAdapter(WordListActivity.OnItemClickListener onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -29,7 +35,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.bindTo();
+        holder.bindTo(mWords.get(position));
     }
 
     @Override
@@ -49,8 +55,10 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
             super(binding.getRoot());
             this.binding = binding;
         }
-        public void bindTo() {
-            binding.tvWord.setText(mWords.get(getAdapterPosition()).getWord());
+
+        public void bindTo(Word word) {
+            binding.setEvent(mOnItemClickListener);
+            binding.setWord(word);
         }
     }
 }
