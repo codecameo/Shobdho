@@ -1,6 +1,8 @@
 package bytes.wit.adapters;
 
 import android.databinding.DataBindingUtil;
+import android.support.v7.util.DiffUtil;
+import android.support.v7.util.ListUpdateCallback;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import bytes.wit.diffutills.WordListDiffUtil;
 import bytes.wit.factory.models.Word;
 import bytes.wit.shobdho.R;
 import bytes.wit.shobdho.WordListActivity;
@@ -44,9 +47,11 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
     }
 
     public void setItems(List<Word> sections) {
+
+        DiffUtil.DiffResult result = DiffUtil.calculateDiff(new WordListDiffUtil(mWords, sections));
         mWords.clear();
         mWords.addAll(sections);
-        notifyDataSetChanged();
+        result.dispatchUpdatesTo(listUpdateCallback);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -61,4 +66,26 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.ViewHo
             binding.setWord(word);
         }
     }
+
+    private ListUpdateCallback listUpdateCallback = new ListUpdateCallback() {
+        @Override
+        public void onInserted(int position, int count) {
+            notifyItemRangeInserted(position, count);
+        }
+
+        @Override
+        public void onRemoved(int position, int count) {
+            notifyItemRangeRemoved(position, count);
+        }
+
+        @Override
+        public void onMoved(int fromPosition, int toPosition) {
+            notifyItemMoved(fromPosition, toPosition);
+        }
+
+        @Override
+        public void onChanged(int position, int count, Object payload) {
+            notifyItemRangeChanged(position, count);
+        }
+    };
 }
