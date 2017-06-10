@@ -2,6 +2,8 @@ package bytes.wit.services;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +33,6 @@ public class WordInsertService extends BaseService {
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
         super.onHandleIntent(intent);
-
         InputStream is = getResources().openRawResource(R.raw.words);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
@@ -55,6 +56,7 @@ public class WordInsertService extends BaseService {
 
         String jsonString = writer.toString();
         WordEntity[] words = mGson.fromJson(jsonString, WordEntity[].class);
+        Log.d("Word",words[0].getMeaning()+"\n"+words[0].getWord()+"\n"+words[0].getPart_of_speech()+"\n"+words[0].getSentence()+"\n"+words[0].getSection_id());
         mWordDB.wordDAO().insertAllWord(words);
     }
 }

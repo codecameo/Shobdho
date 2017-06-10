@@ -24,6 +24,6 @@ public interface SectionDAO {
     /*@Query("SELECT * FROM section")
     LiveData<ArrayList<SectionEntity>> getAllSections();*/
 
-    @Query("SELECT * FROM "+ Constants.SECTION_TABLE_NAME)
+    @Query("SELECT * FROM section")
     LiveData<List<Section>> getAllSections();
 }

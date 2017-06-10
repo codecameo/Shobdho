@@ -27,8 +27,8 @@ public class HomeActivity extends LifecycleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mHomeBinding = DataBindingUtil.setContentView(this,R.layout.activity_home);
-        initViewModel();
         initVariables();
+        initViewModel();
         setupSectionList();
     }
 
@@ -40,12 +40,12 @@ public class HomeActivity extends LifecycleActivity {
     private void initViewModel() {
         model = ViewModelProviders.of(this).get(SectionViewModel.class);
 
-
-
         model.getLiveSections().observe(this, new Observer<List<Section>>() {
             @Override
             public void onChanged(@Nullable List<Section> sections){
-            mSectionAdapter.setItems(sections);
+                if(sections != null){
+                    mSectionAdapter.setItems(sections);
+                }
             }
         });
     }

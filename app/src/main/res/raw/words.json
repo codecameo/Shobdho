@@ -198,5 +198,61 @@
     "sentence":"In a large portion of the young people, what you will see is apathy.",
     "part_of_speech":"Noun",
     "section_id":2
+  },
+  {
+    "id": 26,
+    "word":"Apocryphal",
+    "meaning":"being of questionable authenticity",
+    "sentence":"Many apocryphal tales about Disney and its founder have cropped up over the years.",
+    "part_of_speech":"Adjective",
+    "section_id":3
+  },
+  {
+    "id": 27,
+    "word":"Appease",
+    "meaning":"pacify by acceding to the demand of",
+    "sentence":"The cold drink appeased his thirst.",
+    "part_of_speech":"Verb",
+    "section_id":3
+  },
+  {
+    "id": 28,
+    "word":"Arbitrary",
+    "meaning":"based on a random, groundless decision",
+    "sentence":"It’s true that the dividing lines between generations are debated and somewhat arbitrary.",
+    "part_of_speech":"Adjective",
+    "section_id":3
+  },
+  {
+    "id": 29,
+    "word":"Arcane",
+    "meaning":"requiring secret or mysterious knowledge",
+    "sentence":"The painting evokes the arcane codes of a secret society as well as a sense of mystery and possibility.",
+    "part_of_speech":"Adjective",
+    "section_id":3
+  },
+  {
+    "id": 30,
+    "word":"Arduous",
+    "meaning":"demanding considerable mental effort and skill; testing powers of endurance",
+    "sentence":"In a pre-Internet world, a successful protest march was the culmination of an arduous organizational process.",
+    "part_of_speech":"Adjective",
+    "section_id":3
+  },
+  {
+    "id": 31,
+    "word":"Artful",
+    "meaning":"exhibiting artistic skill",
+    "sentence":"My favorite thing in The Post is the artful photography.",
+    "part_of_speech":"Adjective",
+    "section_id":3
+  },
+  {
+    "id": 32,
+    "word":"Artful",
+    "meaning":"clever in a cunning way",
+    "sentence":"In movies, villains are often artful, as they tell lies or hatch schemes.",
+    "part_of_speech":"Adjective",
+    "section_id":3
   }
 ]

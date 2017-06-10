@@ -44,7 +44,7 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHold
     }
 
     public void setItems(List<Section> sections) {
-        mSections.clear();
+        //mSections.clear();
         mSections.addAll(sections);
         notifyDataSetChanged();
     }
